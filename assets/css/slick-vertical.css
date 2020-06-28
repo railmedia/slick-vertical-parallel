@@ -44,7 +44,9 @@ figure {
 figure:hover {
     background:rgba(0,0,0,.3);
 }
-
+figure:nth-child(1) {
+    border-right:3px solid #fff;
+}
 figure.left {
 	left: 0;
 }
