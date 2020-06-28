@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en-US" itemscope itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#"  class="homepageScroll">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Slick vertical parallel</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-vertical.css" />
+</head>
+<body>
+<div id="content">
+    <figure class="left">
+        <div class="logo">LOGO here</div>
+        <figcaption>
+          <h1>My Company Name</h1>
+          <h2>My Services</h2>
+          <a href="#!">My website name</a>
+        </figcaption>
+    </figure>
+    <figure class="right">
+        <div class="logo">LOGO here</div>
+        <figcaption>
+          <h1>My Company Name</h1>
+          <h2>My Services</h2>
+          <a href="#!">My website name</a>
+        </figcaption>
+    </figure>
+</div>
+<div class="sliders row">
+    <div id="slider-left" class="slider">
+        <div class="box" style="background-image:url('assets/img/arc_1.jpg');">&nbsp;</div>
+        <div class="box" style="background-image:url('assets/img/arc_2.jpg');">&nbsp;</div>
+        <div class="box" style="background-image:url('assets/img/arc_3.jpg');">&nbsp;</div>
+    </div>
+    <div id="slider-right" class="slider">
+        <div class="box" style="background-image:url('assets/img/arc_4.jpg');">&nbsp;</div>
+        <div class="box" style="background-image:url('assets/img/arc_5.jpg');">&nbsp;</div>
+        <div class="box" style="background-image:url('assets/img/arc_6.jpg');">&nbsp;</div>
+    </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    jQuery('#slider-left').slick({
+        dots: false,
+        arrows: false,
+        vertical: true,
+        infinite: true,
+        speed: 1500,
+        swipe: false,
+        slidesToShow: 1,
+        autoplay: false,
+        verticalSwiping: true
+    });
+
+    jQuery('#slider-right').slick({
+        dots: false,
+        arrows: false,
+        vertical: true,
+        infinite: true,
+        speed: 1500,
+        swipe: false,
+        slidesToShow: 1,
+        autoplay: true,
+        pauseOnHover: false,
+        verticalSwiping: true,
+    }).on('beforeChange', function() {
+        jQuery('#slider-left').slick('slickPrev');
+    });
+});
+</script>
+</body>
+</html>
